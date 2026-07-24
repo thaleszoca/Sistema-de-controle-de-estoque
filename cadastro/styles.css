@@ -68,21 +68,23 @@ header {
 }
 
 #secaoCad {
-    width: 500px;
     padding: 1rem;
+    width: 500px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+    gap: 10px;
 }
 
-#cadastrar {
+.botoes {
     border-radius: 15px;
     padding: 10px;
     border: solid 5px #e5edff;
     background-color: white;
+    width: 100%;
 }
 
-#cadastrar:hover {
+.botoes:hover {
     background-color: #e5edff;
     transform: scale(1.07);
 }

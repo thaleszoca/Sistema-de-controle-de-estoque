@@ -55,14 +55,13 @@ function cadastro () {
         CÓDIGO DO PRODUTO: ${codValor} <br> 
         CATEGORIA DO PRODUTO: ${valor} <br> 
         TAMANHO DO PRODUTO: ${tamanhoValor} <br>
-        NÚMERO: ${valorTamanho} <br> 
         COR DO PRODUTO: ${corSelecionada} <br>` 
         console.log(colecaoNova)
 
         if (colecaoNova.checked) {
-            res.innerHTML += 'COLEÇÃO NOVA: O produto pertence a coleção nova'
+            res.innerHTML += 'COLEÇÃO NOVA: O produto pertence à coleção nova.'
         } else {
-            res.innerHTML += 'COLEÇÃO NOVA: O produto não pertence a coleção nova'
+            res.innerHTML += 'COLEÇÃO NOVA: O produto não pertence à coleção nova.'
         }
 
         sucesso.style.display = 'flex'

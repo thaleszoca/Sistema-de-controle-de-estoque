@@ -9,9 +9,7 @@
 <body>
 
      <div id="sucesso">
-        <p>
-            O produto foi cadastrado com sucesso!
-        </p>
+        <p>O produto foi cadastrado com sucesso!</p>
     </div>
 
     <header>
@@ -67,11 +65,7 @@
             </select>
         </div>
 
-        <!-- SE É DA COLEÇÃO NOVA OU NÃO -->
-        <div id="colecaoNova"> 
-            <label class="lbl">Coleção nova: </label> 
-            <input type="checkbox" id="checkbox" class="check">
-        </div>
+
 
         <!-- region:#eadeff20 -->
         <!-- COR DO PRODUTO -->
@@ -108,6 +102,13 @@
             </div>
             <!-- endregion -->
 
+
+            <!-- SE É DA COLEÇÃO NOVA OU NÃO -->
+             <div id="colecaoNova"> 
+                <label class="lbl">Coleção nova: </label> 
+                <input type="checkbox" id="checkbox" class="check">
+             </div>
+
             <!-- IMAGEM DO PRODUTO -->
              <div>
                 <label class="lbl">Insira a imagem do produto: </label> <br>
@@ -116,7 +117,11 @@
     </section>
 
     <section id="secaoCad">
-        <button id="cadastrar">CADASTRAR PRODUTO</button>
+        <a href="produtos/index.html">
+          <button class="botoes">VER PRODUTOS CADASTRADOS</button>
+        </a>
+
+         <button class="botoes" id="cadastrar">CADASTRAR PRODUTO</button>
     </section>
     
     <div id="res">
