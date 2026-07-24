@@ -12,6 +12,7 @@ function cadastro () {
     categoria = document.querySelector('#categoria')
     tamanhoProd = document.querySelector('#tamanho')
     res = document.querySelector('#res')
+    sucesso = document.querySelector('#sucesso')
 
     // Pega diretamente o valor do radio que o usuário marcou (perguntei pra ia) o ?. pega o valor, e se o valor n existir, ele retorna undefined
     let corSelecionada = document.querySelector('input[name="opcao_cor"]:checked')?.value;
@@ -63,6 +64,8 @@ function cadastro () {
         } else {
             res.innerHTML += 'COLEÇÃO NOVA: O produto não pertence a coleção nova'
         }
+
+        sucesso.style.display = 'flex'
     }
 
 }

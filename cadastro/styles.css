@@ -86,3 +86,26 @@ header {
     background-color: #e5edff;
     transform: scale(1.07);
 }
+
+#sucesso {
+    background-color: #01d13f;
+    padding: 0.5rem;
+    width: 300px;
+    border-radius: 25px;
+    display: none;
+    justify-content: center;
+    animation: desaparecer 1 ease-in-out 6s forwards;
+
+    p {
+        color: white;
+    }
+}
+
+@keyframes desaparecer {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
