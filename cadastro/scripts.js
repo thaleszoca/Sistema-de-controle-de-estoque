@@ -13,6 +13,30 @@ function cadastro () {
     tamanhoProd = document.querySelector('#tamanho')
     res = document.querySelector('#res')
 
+    // //peguei o id de cada input radio, não sei se foi a melhor opção
+    // preto = document.querySelector('#preto')
+    // branco = document.querySelector('#branco')
+    // vermelho = document.querySelector('#vermelho')
+    // marrom = document.querySelector('#marrom')
+    // cinza = document.querySelector('#cinza')
+    // amarelo = document.querySelector('#amarelo')
+    // laranja = document.querySelector('#laranja')
+
+    // //pegando os valores dos inputs radio
+    // valorPreto = preto.value
+    // valorLaranja = laranja.value
+    // valorVermelho = vermelho.value
+    // valorMarrom = marrom.value
+    // valorCinza = cinza.value
+    // valorAmarelo = amarelo.value
+    // valorLaranja = laranja.value
+    
+    // cores = [valorPreto, valorLaranja, valorVermelho, valorMarrom, valorCinza, valorAmarelo, valorLaranja]
+
+    // Pega diretamente o valor do radio que o usuário marcou
+    const corSelecionada = document.querySelector('input[name="opcao_cor"]:checked')?.value;
+
+
     //pegando indice, valor e texto da CATEGORIA 
     let indice = categoria.selectedIndex
     let valor = categoria.value
@@ -33,16 +57,22 @@ function cadastro () {
     console.log(valorTamanho)
     console.log(textTamanho)
 
-    //tranformando as variaveis em valores
+    // tranformando as variaveis em valores
     codValor = Number(codProd.value)
+    nomeValor = nomeProd.value
 
-
+    //se nao preencher as informações necessárias
     if (nomeProd.value.length == 0 || codValor <= 0 || indice == "0") {
         window.alert('[ERRO] Preencha os campos necessários')
     }
 
     else {
-        res.innerHTML = `CATEGORIA DO PRODUTO: ${valor} <br> NÚMERO: ${valorTamanho} <br>` 
+        res.innerHTML = 
+        `NOME DO PRODUTO: ${nomeValor} <br> 
+        CATEGORIA DO PRODUTO: ${valor} <br> 
+        NÚMERO: ${valorTamanho} <br> 
+        CÓDIGO DO PRODUTO: ${codValor} <br> 
+        COR DO PRODUTO: ${corSelecionada}` 
     }
 
 }
