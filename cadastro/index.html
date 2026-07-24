@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de produtos</h1>
+        <h2>Cadastre o produto para o estoque.</h2>
+    </header>
+
+    <!-- fazendo a parte das informações do produto -->
+    <section id="infosProd">
+
+        <!-- NOME DO PRODUTO -->
+        <div id="nomeProd">
+            <label class="lbl">Nome do produto:</label> 
+            <input type="text" class="input" id="nome">
+        </div>
+
+        <!-- CODIGO DO PRODUTO -->
+         <div>
+            <label for="" class="lbl">Código do produto: </label>
+            <input type="number"class="input" id="codProd">
+         </div>
+
+
+        <!-- CATEGORIA -->
+        <div id="categoriaProd">
+            <label class="lbl">Categoria do Produto: </label>
+            <select class="select" id="categoria"> 
+                <option value="select"  id="select" class="optn">Selecione a categoria</option>
+                <option value="nike"    id="nike"   class="optn">Nike</option>
+                <option value="adidas"  id="adidas" class="optn">Adidas</option>
+                <option value="puma"    id="puma"   class="optn">Puma</option>
+                <option value="asics"   id="asics"  class="optn">Asics</option>
+            </select>
+        </div>
+
+        <!-- TAMANHO DO PRODUTO -->
+        <div id="tamanhoProd">
+            <label class="lbl">Tamanho do Produto: </label>
+            <select name="" class="select" id="tamanho">
+                <option value="select" class="optn">Selecione um valor</option>
+                <option value="33" class="optn">33</option>
+                <option value="34" class="optn">34</option>
+                <option value="33" class="optn">35</option>
+                <option value="36" class="optn">36</option>
+                <option value="37" class="optn">37</option>
+                <option value="38" class="optn">38</option>
+                <option value="39" class="optn">39</option>
+                <option value="40" class="optn">40</option>
+                <option value="37" class="optn">41</option>
+                <option value="38" class="optn">42</option>
+                <option value="39" class="optn">43</option>
+                <option value="40" class="optn">44</option>
+            </select>
+        </div>
+
+        <!-- SE É DA COLEÇÃO NOVA OU NÃO -->
+        <div id="colecaoNova"> 
+            <label class="lbl">Coleção nova: </label> 
+            <input type="checkbox" id="checkbox" class="check">
+        </div>
+
+        <!-- region:#eadeff20 -->
+        <!-- COR DO PRODUTO -->
+            <label class="lbl">Cor do produto: </label> 
+            
+            <div id="divInput">
+                <label class="radios">
+                  <input type="radio" name= "opcao_cor" id="preto" class="check">Preto 
+                </label>
+
+                <label class="radios">
+                  <input type="radio" name= "opcao_cor"  id="branco" class="check">Branco 
+                </label>
+
+                <label class="radios">
+                  <input type="radio" name= "opcao_cor"  id="vermelho" class="check">Vermelho 
+                </label>
+
+                <label class="radios">
+                <input type="radio" name= "opcao_cor"  id="marrom" class="check">Marrom
+                </label>
+                
+                <label class="radios">
+                <input type="radio" name= "opcao_cor" id="cinza" class="check">Cinza 
+                </label>
+
+                <label class="radios">
+                <input type="radio" name= "opcao_cor" id="amarelo" class="check">Amarelo 
+                </label>
+
+                <label class="radios">
+                <input type="radio" name= "opcao_cor"  id="laranja" class="check">Laranja  
+                </label>
+            </div>
+            <!-- endregion -->
+
+            <!-- IMAGEM DO PRODUTO -->
+             <div>
+                <label class="lbl">Insira a imagem do produto: </label> <br>
+                <input type="file" accept="image/*" id="escolherImagem">
+             </div>
+    </section>
+
+    <section id="secaoCad">
+        <button id="cadastrar">CADASTRAR PRODUTO</button>
+    </section>
+    
+    <div id="res">
+       
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
