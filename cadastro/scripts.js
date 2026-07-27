@@ -13,6 +13,7 @@ function cadastro () {
     tamanhoProd = document.querySelector('#tamanho')
     res = document.querySelector('#res')
     sucesso = document.querySelector('#sucesso')
+    preco = document.querySelector('#preco')
 
     // Pega diretamente o valor do radio que o usuário marcou (perguntei pra ia) o ?. pega o valor, e se o valor n existir, ele retorna undefined
     let corSelecionada = document.querySelector('input[name="opcao_cor"]:checked')?.value;
@@ -45,7 +46,7 @@ function cadastro () {
     colecaoValor = colecaoNova.checked
 
     //se nao preencher as informações necessárias
-    if (nomeProd.value.length == 0 || codValor <= 0 || indice == "0" || corSelecionada == undefined) {
+    if (nomeProd.value.length == 0 || codValor <= 0 || indice == "0" || corSelecionada == undefined || preco.value.length == 0) {
         window.alert('[ERRO] Preencha os campos necessários')
     }
 
@@ -55,6 +56,7 @@ function cadastro () {
         CÓDIGO DO PRODUTO: ${codValor} <br> 
         CATEGORIA DO PRODUTO: ${valor} <br> 
         TAMANHO DO PRODUTO: ${tamanhoValor} <br>
+        PRECO DO PRODUTO: ${preco.value}<br>
         COR DO PRODUTO: ${corSelecionada} <br>` 
         console.log(colecaoNova)
 
