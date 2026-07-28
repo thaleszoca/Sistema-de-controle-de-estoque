@@ -2,6 +2,7 @@ const conectar = async ()=> {
     if(global.conexao && global.conexao.state != 'disconected')
         return global.conexao
     const mysql= require('mysql2/promise')
+    //endereço do meu banco de dados
     const con=mysql.createConnection("mysql://root:root@localhost:3306/estoque")
     console.log('Conectou ao banco')
     global.conexao=con
@@ -15,3 +16,4 @@ const produtos = async() =>{
 }
 
 module.exports = {produtos}
+
