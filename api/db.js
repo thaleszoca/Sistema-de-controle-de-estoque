@@ -1,14 +1,17 @@
-import mysql from "mysql2/promise"
-import dotenv from "dotenv"
+const conectar = async ()=> {
+    if(global.conexao && global.conexao.state != 'disconected')
+        return global.conexao
+    const mysql= require('mysql2/promise')
+    const con=mysql.createConnection("mysql://root:root@localhost:3306/estoque")
+    console.log('Conectou ao banco')
+    global.conexao=con
+    return con
+}
 
-dotenv.config();
+const produtos = async() =>{
+    const con=await conectar ()
+    const [linhas] = await con.query('SELECT * FROM produtos')
+    return await linhas
+}
 
-export const pool = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_DATABASE,
-    database: process.env.DB_DATABASE,
-    port: Number(process.env.BD_PORT),
-    waitForConnections: true,
-    connectionLimit: 10,
-})
+module.exports = {produtos}
