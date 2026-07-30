@@ -1,4 +1,5 @@
 const conectar = async ()=> {
+    //se conectou ao banco, retorne a conexão
     if(global.conexao && global.conexao.state != 'disconected')
         return global.conexao
     const mysql= require('mysql2/promise')
@@ -9,11 +10,5 @@ const conectar = async ()=> {
     return con
 }
 
-const produtos = async() =>{
-    const con=await conectar ()
-    const [linhas] = await con.query('SELECT * FROM produtos')
-    return await linhas
-}
-
-module.exports = {produtos}
+module.exports = {conectar}
 

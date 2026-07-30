@@ -5,15 +5,20 @@ casdastrar.addEventListener('click', cadastro)
 //iniciando a função 
 function cadastro () {
     //pegando as variaveis para usar com os valores 
-    nomeProd = document.querySelector('#nome')
-    codProd = document.querySelector('#codProd')
-    colecaoNova = document.querySelector('#checkbox')
-    corProd = document.querySelector('.check')
-    categoria = document.querySelector('#categoria')
-    tamanhoProd = document.querySelector('#tamanho')
-    res = document.querySelector('#res')
-    sucesso = document.querySelector('#sucesso')
-    preco = document.querySelector('#preco')
+    nomeProd = document.querySelector('#nome').value
+    codProd = document.querySelector('#codProd').value
+    colecaoNova = document.querySelector('#checkbox').value
+    corProd = document.querySelector('.check').value
+    categoria = document.querySelector('#categoria').value
+    tamanhoProd = document.querySelector('#tamanho').value
+    res = document.querySelector('#res').value
+    sucesso = document.querySelector('#sucesso').value
+    preco = document.querySelector('#preco').value
+    imagem = document.querySelector('#escolherImagem').value
+
+   let produtos = [nomeProd, codProd, categoria, tamanhoProd, corProd, preco, colecaoNova, imagem]
+
+   console.log(produtos, 1123213)
 
     // Pega diretamente o valor do radio que o usuário marcou (perguntei pra ia) o ?. pega o valor, e se o valor n existir, ele retorna undefined
     let corSelecionada = document.querySelector('input[name="opcao_cor"]:checked')?.value;
